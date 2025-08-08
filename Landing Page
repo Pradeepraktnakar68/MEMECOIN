@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PEPELANTIS — Dive into the Lost City of Memes</title>
+  <meta name="description" content="$PEPELANTIS — From the Depths of Memes, We Rise" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind custom colors
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pepelate: '#00D1D1',
+            pepegold: '#FFD700',
+            deepnavy: '#001F3F'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Simple bubble background */
+    .bubbles {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .bubble {
+      position: absolute;
+      bottom: -10%;
+      width: 10px; height: 10px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 9999px;
+      filter: blur(0.4px);
+      animation: rise 8s linear infinite;
+    }
+    @keyframes rise {
+      0% { transform: translateY(0) scale(0.6); opacity: 0 }
+      10% { opacity: 0.6 }
+      100% { transform: translateY(-140vh) scale(1.2); opacity: 0 }
+    }
+    /* coin shimmer
+       small effect for coin icons on hover */
+    .coin-shimmer:hover { animation: shimmer 1s linear; }
+    @keyframes shimmer {
+      0% { transform: translateY(0) }
+      50% { transform: translateY(-6px) }
+      100% { transform: translateY(0) }
+    }
+    /* subtle parallax for hero image */
+    .hero-img { transform-origin: center; transition: transform .6s ease; }
+    .hero-img:hover { transform: scale(1.02) translateY(-4px); }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-deepnavy via-[#013a45] to-[#013241] text-white antialiased">
+  <div class="relative min-h-screen flex flex-col">
+    <!-- Bubbles layer -->
+    <div class="bubbles" aria-hidden>
+      <!-- generate many bubbles with inline styles (positions & durations) -->
+      <div class="bubble" style="left:8%; width:8px; height:8px; animation-duration:9s; animation-delay:0s"></div>
+      <div class="bubble" style="left:20%; width:12px; height:12px; animation-duration:12s; animation-delay:1s"></div>
+      <div class="bubble" style="left:34%; width:6px; height:6px; animation-duration:7s; animation-delay:.5s"></div>
+      <div class="bubble" style="left:48%; width:14px; height:14px; animation-duration:10s; animation-delay:2s"></div>
+      <div class="bubble" style="left:62%; width:9px; height:9px; animation-duration:11s; animation-delay:0.8s"></div>
+      <div class="bubble" style="left:76%; width:10px; height:10px; animation-duration:13s; animation-delay:1.6s"></div>
+      <div class="bubble" style="left:88%; width:7px; height:7px; animation-duration:8.5s; animation-delay:.3s"></div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="z-10 relative container mx-auto p-6 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="PEPELANTIS logo" class="w-12 h-12 rounded-md object-cover border-2 border-pepegold" />
+        <div>
+          <div class="font-bold text-lg">$PEPELANTIS</div>
+          <div class="text-xs text-pepelate">From the Depths of Memes, We Rise</div>
+        </div>
+      </a>
+      <nav class="flex items-center gap-3">
+        <a href="#buy" class="px-4 py-2 bg-pepelate text-deepnavy rounded-md font-semibold">Buy on Pump.fun</a>
+        <a href="#join" class="px-4 py-2 border border-white/20 rounded-md">Join</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <main class="z-10 relative container mx-auto flex-1 px-6 flex flex-col md:flex-row items-center gap-8">
+      <section class="flex-1 max-w-2xl">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight drop-shadow-lg">🌊 Dive into the Lost City of Memes</h1>
+        <p class="mt-4 text-lg text-white/90">$PEPELANTIS — the treasure meme coin for community hunters. Join, meme, and loot the underwater city.</p>
+
+        <div class="mt-6 flex gap-3">
+          <a id="buy" href="https://pump.fun/" target="_blank" class="px-5 py-3 bg-pepelate text-deepnavy rounded-full font-bold shadow-lg hover:opacity-95">Buy on Pump.fun</a>
+          <a id="join" href="#join" class="px-5 py-3 border border-white/20 rounded-full">Join Telegram</a>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-4 rounded-lg bg-white/5">
+            <div class="text-sm text-white/80">Supply</div>
+            <div class="mt-1 text-2xl font-bold">100,000,000</div>
+            <div class="text-xs text-white/60">Plenty for treasure hunters</div>
+          </div>
+
+          <div class="p-4 rounded-lg bg-white/5">
+            <div class="text-sm text-white/80">Liquidity</div>
+            <div class="mt-1 text-2xl font-bold">Locked</div>
+            <div class="text-xs text-white/60">Locked like a chest</div>
+          </div>
+
+          <div class="p-4 rounded-lg bg-white/5 coin-shimmer">
+            <div class="text-sm text-white/80">Tax</div>
+            <div class="mt-1 text-2xl font-bold">0%</div>
+            <div class="text-xs text-white/60">No sharks allowed 🦈</div>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <h3 class="text-xl font-semibold">Roadmap — Meme Style</h3>
+          <ol class="mt-3 space-y-3 text-white/80">
+            <li>🌊 <strong>The Dive</strong> — Launch on Pump.fun, soft marketing wave</li>
+            <li>🏴‍☠️ <strong>The Loot</strong> — Meme contests, influencer raids, community airdrops</li>
+            <li>🏛 <strong>Atlantis Revealed</strong> — NFTs, merch, DAO votes on drops</li>
+          </ol>
+        </div>
+      </section>
+
+      <aside class="flex-1 flex justify-center">
+        <!-- Hero image / GIF. Replace assets/banner.gif with your animated GIF. -->
+        <div class="w-full max-w-md rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-b from-[#002e33] to-[#003c49]">
+          <img src="assets/banner.gif" alt="Dive into PEPELANTIS" class="hero-img w-full h-auto object-cover" />
+        </div>
+      </aside>
+    </main>
+
+    <!-- Community / CTA -->
+    <section id="join" class="z-10 relative container mx-auto px-6 py-12">
+      <div class="bg-white/5 rounded-2xl p-8 flex flex-col md:flex-row items-center gap-6">
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold">Join the Hunt</h3>
+          <p class="mt-2 text-white/80">Telegram + X are where the treasure maps appear. Meme contests, airdrops, early access to NFT drops.</p>
+        </div>
+        <div class="flex gap-4">
+          <a href="https://t.me/your_telegram" target="_blank" class="px-5 py-3 bg-pepelate text-deepnavy rounded-full font-bold">Telegram</a>
+          <a href="https://twitter.com/" target="_blank" class="px-5 py-3 border border-white/20 rounded-full">X (Twitter)</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="z-10 relative mt-auto py-8 container mx-auto px-6 text-center text-sm text-white/60">
+      <div>© 2025 $PEPELANTIS — Made with memes under the sea</div>
+      <div class="mt-2 text-xs">Replace <code>assets/logo.png</code> and <code>assets/banner.gif</code> with your files. Deploy to Netlify / Vercel by uploading this file and the <code>assets/</code> folder.</div>
+    </footer>
+  </div>
+
+  <script>
+    // small script to generate extra bubbles dynamically if needed
+    const container = document.querySelector('.bubbles');
+    for (let i=0;i<12;i++){
+      const el = document.createElement('div');
+      el.className='bubble';
+      const left = Math.random()*100;
+      const size = 6 + Math.random()*18;
+      el.style.left = left+'%';
+      el.style.width = size+'px';
+      el.style.height = size+'px';
+      el.style.animationDuration = (7 + Math.random()*9)+'s';
+      el.style.animationDelay = (-Math.random()*10)+'s';
+      container.appendChild(el);
+    }
+  </script>
+</body>
+</html>
